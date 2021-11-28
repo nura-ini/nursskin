@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFEFEF"
+    tools:context=".activity_beranda">
+    <androidx.appcompat.widget.Toolbar
+        android:background="@color/nursskin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+            <Button
+                android:layout_weight="1"
+                android:textColor="@color/cardview_dark_background"
+                android:backgroundTint="@color/white"
+                android:gravity="left|center_vertical"
+                android:drawableLeft="@drawable/ic_cari"
+                android:textAllCaps="false"
+                android:text="cari sesuatu..."
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <RelativeLayout
+                android:layout_width="5dp"
+                android:layout_height="match_parent"/>
+            <androidx.cardview.widget.CardView
+                android:clickable="true"
+                app:cardCornerRadius="5dp"
+                android:layout_gravity="center_vertical"
+                android:layout_width="37dp"
+                android:layout_height="37dp">
+                <Button
+                    android:layout_gravity="center"
+                    android:background="@drawable/ic_keranjang"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"/>
+            </androidx.cardview.widget.CardView>
+            <RelativeLayout
+                android:layout_width="7dp"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/white"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
